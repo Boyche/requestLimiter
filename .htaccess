@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+
+#Zadatak 2
+RewriteRule  ^greet/([0-9A-Za-z]+)/?$   backend_tests/rate_limiting/greet.php?name=$1   [NC,L]    # Handle requests for "greet"
+RewriteRule  ^rate_limiting/?$  backend_tests/rate_limiting/index.php
+
+#Zadatak 3
+#RewriteRule  ^shorten/([0-9A-Za-z]+)/?$   backend_tests/url_shortener/shorten.php?url=$1   [NC,L]    # Handle requests for "openUrl"
+#RewriteRule  ^([0-9A-Za-z]+)$   backend_tests/url_shortener/openUrl.php?shortUrl=$1   [NC,L]    # Handle requests for "openUrl"
